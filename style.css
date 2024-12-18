@@ -87,40 +87,54 @@ body {
   transform: translate(-50%, -50%);
   opacity: 0;
 }
-
 .text-1979 {
   font-family: "ClimateCrisis1979", sans-serif;
-  animation: fadeInOutSmooth 10s 0s forwards;
+  animation: fadeInOutSmooth 120s 0s forwards;
 }
 
 .text-1990 {
   font-family: "ClimateCrisis1990", sans-serif;
-  animation: fadeInOutSmooth 10s 3s forwards;
+  animation: fadeInOutSmooth 120s 40s forwards;
 }
 
 .text-2010 {
   font-family: "ClimateCrisis2010", sans-serif;
-  animation: fadeInOutSmooth 10s 6s forwards;
+  animation: fadeInOutSmooth 120s 80s forwards;
 }
 
 .text-2019 {
   font-family: "ClimateCrisis2019", sans-serif;
-  animation: fadeInOutSmooth 10s 9s forwards;
+  animation: fadeInOutSmooth 120s 120s forwards;
 }
 
 .text-2030 {
   font-family: "ClimateCrisis2030", sans-serif;
-  animation: fadeInOutSmooth 10s 12s forwards;
+  animation: fadeInOutSmooth 120s 160s forwards;
 }
 
 .text-2040 {
   font-family: "ClimateCrisis2040", sans-serif;
-  animation: fadeInOutSmooth 10s 15s forwards;
+  animation: fadeInOutSmooth 120s 200s forwards;
 }
 
 .text-2050 {
   font-family: "ClimateCrisis2050", sans-serif;
-  animation: fadeInOutSmooth 10s 18s forwards;
+  animation: fadeInOutSmooth 120s 240s forwards;
+}
+
+@keyframes fadeInOutSmooth {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .img-box1 {
@@ -330,7 +344,7 @@ body {
   height: 20px;
   left: 50%;
   top: 60%;
-  animation: rotateFast 15s linear infinite;
+  animation: rotateFast 1s linear infinite !important;
 }
 
 #clock02 {

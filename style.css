@@ -1,354 +1,407 @@
-@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
-
 * {
-  font-family: "Black Han Sans", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "ClimateCrisis1979";
+  src: url("fonts/ClimateCrisisKR-1979.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ClimateCrisis1990";
+  src: url("fonts/ClimateCrisisKR-1990.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ClimateCrisis2010";
+  src: url("fonts/ClimateCrisisKR-2010.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ClimateCrisis2019";
+  src: url("fonts/ClimateCrisisKR-2019.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ClimateCrisis2030";
+  src: url("fonts/ClimateCrisisKR-2030.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ClimateCrisis2040";
+  src: url("fonts/ClimateCrisisKR-2040.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ClimateCrisis2050";
+  src: url("fonts/ClimateCrisisKR-2050.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Freesentation-6";
+  src: url("fonts/Freesentation-6SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Freesentation-5";
+  src: url("fonts/Freesentation-5Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Freesentation-4";
+  src: url("fonts/Freesentation-4Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Freesentation-3";
+  src: url("fonts/Freesentation-3Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Freesentation-2";
+  src: url("fonts/Freesentation-2ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Freesentation-1";
+  src: url("fonts/Freesentation-1Thin.ttf") format("truetype");
+}
+
 body {
+  background-color: #0548ff;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #e50112;
   overflow: hidden;
 }
 
 .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: relative;
-  width: 100vw;
-  height: 100vh;
-  padding: 0 20px;
+  width: 100%;
+  height: 100%;
 }
 
-.center-fixed {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.overlay-img {
+.text-layer {
   position: absolute;
-  top: 66%;
+  font-size: 70px;
+  color: white;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 450px;
-  height: auto;
-  z-index: 10;
-  transform-origin: 50% 100%;
-  animation: gentleSwing 4s infinite linear;
+  opacity: 0;
 }
 
-@keyframes gentleSwing {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  25% {
-    transform: translate(-50%, -50%) rotate(2deg);
-  }
-  50% {
-    transform: translate(-50%, -50%) rotate(-2deg);
-  }
-  75% {
-    transform: translate(-50%, -50%) rotate(2deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
+.text-1979 {
+  font-family: "ClimateCrisis1979", sans-serif;
+  animation: fadeInOutSmooth 10s 0s forwards;
 }
 
-.ticket-set {
+.text-1990 {
+  font-family: "ClimateCrisis1990", sans-serif;
+  animation: fadeInOutSmooth 10s 3s forwards;
+}
+
+.text-2010 {
+  font-family: "ClimateCrisis2010", sans-serif;
+  animation: fadeInOutSmooth 10s 6s forwards;
+}
+
+.text-2019 {
+  font-family: "ClimateCrisis2019", sans-serif;
+  animation: fadeInOutSmooth 10s 9s forwards;
+}
+
+.text-2030 {
+  font-family: "ClimateCrisis2030", sans-serif;
+  animation: fadeInOutSmooth 10s 12s forwards;
+}
+
+.text-2040 {
+  font-family: "ClimateCrisis2040", sans-serif;
+  animation: fadeInOutSmooth 10s 15s forwards;
+}
+
+.text-2050 {
+  font-family: "ClimateCrisis2050", sans-serif;
+  animation: fadeInOutSmooth 10s 18s forwards;
+}
+
+.img-box1 {
+  height: 80px;
+  width: 360px;
   position: absolute;
-  top: 44%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 30%;
+  left: -15%;
+
+  background-image: url("img/halftone360.png");
+  background-size: contain;
+}
+
+.img-box2 {
+  height: 80px;
+  width: 360px;
+  position: absolute;
+  top: 37%;
+  left: -15%;
+
+  background-image: url("img/halftone360.png");
+  background-size: contain;
+}
+
+.img-box3 {
+  height: 80px;
+  width: 360px;
+  position: absolute;
+  top: 45%;
+  left: -5%;
+
+  background-image: url("img/halftone360.png");
+  background-size: contain;
+}
+
+.img-box4 {
+  height: 80px;
+  width: 360px;
+  position: absolute;
+  top: 52%;
+  left: 10%;
+
+  background-image: url("img/halftone360.png");
+  background-size: contain;
+}
+
+.img-box5 {
+  height: 160px;
   width: 720px;
-  height: 400px;
-  z-index: 1000;
-}
-
-.ticket-img {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 1;
-  transition: opacity 0.5s ease;
+  top: 62%;
+  left: -5%;
+
+  background-image: url("img/halftone720.png");
+  background-size: contain;
 }
 
-.ticketcolor-img {
+.img-box6 {
+  height: 120px;
+  width: 540px;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  opacity: 0;
-  z-index: 2;
-  transition: opacity 0.5s ease;
+  top: 80%;
+  left: -15%;
+
+  background-image: url("img/halftone540.png");
+  background-size: contain;
 }
 
-.ticket-set:hover .ticket-img {
-  opacity: 0;
-}
-
-.ticket-set:hover .ticketcolor-img {
-  opacity: 1;
-}
-.ticket-text {
+.img-box7 {
+  height: 120px;
+  width: 540px;
   position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  z-index: 3;
-  white-space: nowrap;
-  opacity: 0;
+  top: 85%;
+  left: -10%;
+
+  background-image: url("img/halftone540.png");
+  background-size: contain;
 }
 
-.typing-text {
-  display: block;
-  opacity: 0;
-  border-right: 3px solid white;
-  overflow: hidden;
-  white-space: nowrap;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.ticket-set:hover .ticket-text {
-  opacity: 1;
-}
-
-.ticket-set:hover .typing-text:nth-child(1) {
-  animation: typing 2s steps(40, end) forwards,
-    blink-caret 0.75s step-end infinite;
-  animation-delay: 0s;
-  opacity: 1;
-}
-
-.ticket-set:hover .typing-text:nth-child(2) {
-  animation: typing 2s steps(40, end) forwards,
-    blink-caret 0.75s step-end infinite;
-  animation-delay: 2.5s;
-  opacity: 1;
-}
-
-.ticket-set:hover .typing-text:nth-child(3) {
-  animation: typing 2s steps(40, end) forwards,
-    blink-caret 0.75s step-end infinite;
-  animation-delay: 5s;
-  opacity: 1;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink-caret {
-  50% {
-    border-color: transparent;
-  }
-}
-
-.side-box-group {
+.img-box8 {
+  height: 80px;
+  width: 360px;
   position: absolute;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 80vh;
-  width: 300px;
-  animation: scrollBox 30s linear infinite;
+  top: 85%;
+  left: 60%;
+
+  background-image: url("img/halftone360.png");
+  background-size: contain;
 }
 
-.left-box {
+.img-box9 {
+  height: 80px;
+  width: 360px;
+  position: absolute;
+  top: 75%;
+  left: 75%;
+
+  background-image: url("img/halftone360.png");
+  background-size: contain;
+}
+
+.img-box10 {
+  height: 80px;
+  width: 360px;
+  position: absolute;
+  top: 10%;
+  left: 80%;
+
+  background-image: url("img/halftone360.png");
+  background-size: contain;
+}
+
+.text-date {
+  position: absolute;
+  top: 5%;
   left: 5%;
-  animation-direction: reverse;
-}
-
-.right-box {
-  right: 5%;
-  animation-direction: normal;
-}
-
-.box {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  margin-bottom: 10px;
-}
-
-.box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.color-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 0, 0, 0);
-  transition: background-color 0.3s ease;
-  z-index: 1;
-}
-
-.box:hover .color-box {
-  background-color: #e50112;
-}
-
-.overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  font-family: "Freesentation-6", sans-serif;
+  font-size: 16px;
   color: white;
-  font-size: 28px;
-  font-weight: bold;
-  z-index: 2;
-  opacity: 0;
-  transition: opacity 0.3s ease;
 }
 
-.box:hover .overlay {
-  opacity: 1;
+.text-title {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-family: "ClimateCrisis1979", sans-serif;
+  font-size: 70px;
+  color: white;
+  animation: fontFade 15s forwards;
 }
 
-@keyframes scrollBox {
+.text-subtitle {
+  position: absolute;
+  top: 18%;
+  right: 30%;
+  font-family: "ClimateCrisis1979", sans-serif;
+  font-size: 25px;
+  color: white;
+  animation: fontFade 15s forwards;
+}
+
+.text-rotated {
+  position: absolute;
+  bottom: 10%;
+  right: -10%;
+  font-family: "ClimateCrisis1979", sans-serif;
+  font-size: 20px;
+  color: white;
+  transform: rotate(90deg);
+  animation: fontFade 15s forwards;
+}
+
+.text-open {
+  position: absolute;
+  bottom: 8%;
+  right: -3%;
+  font-family: "Freesentation-6", sans-serif;
+  font-size: 20px;
+  color: white;
+  transform: rotate(90deg);
+}
+
+@keyframes fontFade {
   0% {
-    transform: translateY(-100%);
+    font-family: "ClimateCrisis1979", sans-serif;
+    opacity: 1;
   }
-  100% {
-    transform: translateY(100%);
-  }
-}
-
-.side-box-group:hover {
-  animation-play-state: paused;
-}
-
-.title-images {
-  position: fixed;
-  top: 0%;
-  left: 0%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 5px;
-  z-index: 15;
-}
-
-.title-img {
-  position: fixed;
-}
-
-@keyframes bounce {
-  0% {
-    margin-top: 0;
-  }
-  20% {
-    margin-top: -12px;
+  15% {
+    font-family: "ClimateCrisis1990", sans-serif;
+    opacity: 1;
   }
   30% {
-    margin-top: -15px;
+    font-family: "ClimateCrisis2010", sans-serif;
+    opacity: 1;
   }
-  40% {
-    margin-top: -14px;
-  }
-  50% {
-    margin-top: -8px;
+  45% {
+    font-family: "ClimateCrisis2019", sans-serif;
+    opacity: 1;
   }
   60% {
-    margin-top: -2px;
-  }
-  70% {
-    margin-top: 0;
-  }
-  85% {
-    margin-top: -2px;
-  }
-  100% {
-    margin-top: 0;
-  }
-}
-
-.title-images img:nth-child(1) {
-  animation: bounce 1.2s ease-in-out 1;
-  animation-delay: 0s;
-}
-.title-images img:nth-child(2) {
-  animation: bounce 1.2s ease-in-out 1;
-  animation-delay: 0.6s;
-}
-.title-images img:nth-child(3) {
-  animation: bounce 1.2s ease-in-out 1;
-  animation-delay: 1.2s;
-}
-.title-images img:nth-child(4) {
-  animation: bounce 1.2s ease-in-out 1;
-  animation-delay: 1.8s;
-}
-.title-images img:nth-child(5) {
-  animation: bounce 1.2s ease-in-out 1;
-  animation-delay: 2.4s;
-}
-.title-images img:nth-child(6) {
-  animation: bounce 1.2s ease-in-out 1;
-  animation-delay: 3s;
-}
-.title-images img:nth-child(7) {
-  animation: bounce 1.2s ease-in-out 1;
-  animation-delay: 3.6s;
-}
-.title-images img:nth-child(8) {
-  animation: bounce 1.2s ease-in-out 1;
-  animation-delay: 4.2s;
-}
-.title-images img:nth-child(9) {
-  animation: bounce 1.2s ease-in-out 1;
-  animation-delay: 4.8s;
-}
-.title-images img:nth-child(10) {
-  animation: bounce 1.2s ease-in-out 1;
-  animation-delay: 5.4s;
-}
-
-.fish-img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  z-index: 20;
-  animation: fishSwim 3s infinite ease-in-out;
-}
-
-@keyframes fishSwim {
-  0% {
-    transform: translate(-50%, -50%) translateX(0px) translateY(0px);
-  }
-  25% {
-    transform: translate(-50%, -50%) translateX(5px) translateY(-2px);
-  }
-  50% {
-    transform: translate(-50%, -50%) translateX(0px) translateY(3px);
+    font-family: "ClimateCrisis2030", sans-serif;
+    opacity: 1;
   }
   75% {
-    transform: translate(-50%, -50%) translateX(-5px) translateY(-2px);
+    font-family: "ClimateCrisis2040", sans-serif;
+    opacity: 1;
+  }
+  90% {
+    font-family: "ClimateCrisis2050", sans-serif;
+    opacity: 1;
   }
   100% {
-    transform: translate(-50%, -50%) translateX(0px) translateY(0px);
+    font-family: "ClimateCrisis2050", sans-serif;
+    opacity: 0;
   }
+}
+
+.rectangle {
+  position: absolute;
+  background-color: #eb4dd8;
+  transform-origin: center;
+  pointer-events: none;
+}
+
+#clock01 {
+  width: 500px;
+  height: 20px;
+  left: 50%;
+  top: 60%;
+  animation: rotateFast 15s linear infinite;
+}
+
+#clock02 {
+  width: 240px;
+  height: 20px;
+  left: 42%;
+  top: 55%;
+  animation: rotateSlow 30s linear infinite;
+}
+
+@keyframes rotateFast {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateSlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeOutText {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.text-date,
+.text-date2,
+.text-location,
+.text-open {
+  position: absolute;
+  color: white;
+  animation: fadeOutText 15s forwards;
+}
+
+.text-date {
+  top: 5%;
+  left: 5%;
+  font-family: "Freesentation-6", sans-serif;
+  font-size: 16px;
+}
+
+.text-date2 {
+  top: 25%;
+  right: 10%;
+  font-family: "Freesentation-6", sans-serif;
+  font-size: 16px;
+}
+
+.text-location {
+  top: 28%;
+  right: 10%;
+  font-family: "Freesentation-6", sans-serif;
+  font-size: 20px;
+}
+
+.text-open {
+  bottom: 8%;
+  right: -3%;
+  transform: rotate(90deg);
+  font-family: "Freesentation-6", sans-serif;
+  font-size: 20px;
 }
